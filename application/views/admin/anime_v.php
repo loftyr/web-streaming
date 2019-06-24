@@ -158,7 +158,7 @@
     <div class="modal-content">
       <!-- Bagian Judul Modal -->
       <div class="modal-header">
-        <h5 class="modal-title">Modal</h5>
+        <h5 class="modal-title" id="title-modal-list">Modal</h5>
 
         <button class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>

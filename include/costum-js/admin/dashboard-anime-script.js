@@ -8,7 +8,7 @@ const btnSave     = document.querySelector('#btn-save');
 const btn_save    = $('#btn-save');
 const btn_saveList= $('#save-list');
 const judulModal  = $('#title-modal');
-const jdlModalList= $('#title-modal');
+const jdlModalList= $('#title-modal-list');
 const btnAddList  = document.querySelector('#add-list');
 const btnSaveList = document.querySelector('#save-list');
 

@@ -117,6 +117,11 @@ body{
     border-radius: 5px;
 }
 
+.active{
+    background: rgba(23, 225, 23, .4);
+    border-radius: 5px;
+}
+
 @media (max-width: 425px) {
     #logo {
         text-align: center;

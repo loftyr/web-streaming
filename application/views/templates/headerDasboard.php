@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Movie DB</h6>
                     <a class="collapse-item <?= $class_anime; ?>" data-link="anime" id="anime" href="<?= base_url('admin/PageAnime') ?>">Anime</a>
-                    <a class="collapse-item <?= $class_film; ?>" data-link="film" id="film" href="#">Film</a>
+                    <a class="collapse-item <?= $class_film; ?>" data-link="film" id="film" href="<?= base_url('admin/PageFilm') ?>">Film</a>
                     <a class="collapse-item <?= $class_series; ?>" data-link="series" id="series" href="#">Film Series</a>
                 </div>
             </div>

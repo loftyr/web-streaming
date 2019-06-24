@@ -94,4 +94,23 @@ class Admin extends CI_Controller {
 
     // Akhir Anime
 
+    // Anime
+    public function PageFilm(){
+        $data["active_link"]    = "film_v";
+
+        $data['jml_anime']      = $this->anime_m->jml_anime();
+        $data['jml_episode']    = $this->anime_m->jml_episode();
+
+        $dataHeader["class_show"]   = "show";
+        $dataHeader["class_anime"]  = "";
+        $dataHeader["class_film"]   = "active";
+        $dataHeader["class_series"] = "";
+
+        $dataHeader["css"]          = "";
+        $dataFooter['js']           = "dashboard-film-script.js"; //
+
+        $this->load->view('templates/headerDasboard', $dataHeader);
+        $this->load->view('admin/dashboard_v', $data);
+        $this->load->view('templates/footerDasboard', $dataFooter);
+    }
 }
