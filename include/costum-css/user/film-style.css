@@ -1,0 +1,138 @@
+#isi-data {
+    height: 100%;
+}
+
+.main-body{
+    padding-bottom: 60px;
+}
+
+.card-list{
+    overflow: hidden;
+    width: 200px;
+    margin: 10px 5px;
+    padding: 0;
+    float: left;
+    border-radius: 15px;
+    text-decoration: none;
+    max-height: 250px;
+}
+
+
+.img-list img{
+    border-radius: 15px;
+    width: 100%;
+    transition: .4s;
+}
+
+.info-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 15px;
+    color: black;
+}
+
+.rating{
+    position: absolute;
+    background: #ff0000;
+    left: 0;
+    border-top-left-radius: 15px;
+    padding-left: 8px;
+    padding-right: 2px;
+    color: black;
+}
+
+.kualitas{
+    position: absolute;
+    background: #ff0000;
+    right: 0;
+    border-top-right-radius: 15px;
+    padding-right: 7px;
+    padding-left: 4px;
+}
+
+.judul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, 25%);
+    background: rgba(0, 0, 0, .3);
+    text-align: center; 
+    color: white;
+    padding-top: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+    transition: .3s;
+}
+
+.img-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    color: white;
+    font-size: 60px;
+    transition: .7s;
+    opacity: 0;
+}
+
+.card-list:hover .img-play{
+    opacity: 1;
+}
+
+.card-list:hover .img-list img{
+    filter: blur(1.2px);
+}
+
+.card-list:hover .judul {
+    background: rgba(0, 0, 0, .8);
+}
+
+.button-load {
+    padding-top: 10px;
+}
+
+
+.my-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 24px;
+    border: 1px solid #450505;
+    border-radius: 8px;
+    background: #c10f0f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c10f0f), to(#450505));
+    background: -moz-linear-gradient(top, #c10f0f, #450505);
+    background: linear-gradient(to bottom, #c10f0f, #450505);
+    -webkit-box-shadow: #e81212 0px 0px 40px 0px;
+    -moz-box-shadow: #e81212 0px 0px 40px 0px;
+    box-shadow: #e81212 0px 0px 40px 0px;
+    text-shadow: #270303 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.my-button:hover,
+.my-button:focus {
+    border: 1px solid #4d0606;
+    background: #e81212;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e81212), to(#530606));
+    background: -moz-linear-gradient(top, #e81212, #530606);
+    background: linear-gradient(to bottom, #e81212, #530606);
+    color: #ffffff;
+    text-decoration: none;
+}
+.my-button:active {
+    background: #450505;
+    background: -webkit-gradient(linear, left top, left bottom, from(#450505), to(#450505));
+    background: -moz-linear-gradient(top, #450505, #450505);
+    background: linear-gradient(to bottom, #450505, #450505);
+}

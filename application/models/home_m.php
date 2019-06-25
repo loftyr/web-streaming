@@ -6,16 +6,14 @@ class home_m extends CI_Model {
     var $table2     = 'list_episode_anime'; /*Tabel Episode Anime*/
 
     public function get_jumlah_row() {
-        $this->db->from($this->table .' A');
-        $this->db->join($this->table2 .' B', 'A.id_anime = B.id_anime');
+        $this->db->from($this->table);
         return $this->db->get()->num_rows();
     }
 
     public function get_data($limit, $start) {
-        $this->db->join($this->table2 .' B', 'A.id_anime = B.id_anime');
-        $this->db->order_by('B.tgl_upload', 'desc');
+        $this->db->order_by('id_anime', 'desc');
 
-        return $this->db->get($this->table.' A', $limit, $start)->result();
+        return $this->db->get($this->table, $limit, $start)->result();
     }
 
     public function get_jumlah_rowAnime($id){

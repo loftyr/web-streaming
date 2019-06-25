@@ -144,6 +144,7 @@ $(document).on('click', '.btnEdit', function(){
           $('#Studio').val(result[0].studio);
           $('#Uploader').val(result[0].uploader);
           $('#Encoder').val(result[0].encoder);
+          $('#Rating').val(result[0].rating);
         }
     });
 });

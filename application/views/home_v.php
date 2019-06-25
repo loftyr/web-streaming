@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="homenav">
                 <ul class="navbar-nav">
                     <li class="nav-item pr-2">
-                        <a class="nav-link active" href="<?= base_url() ?>">Anime DB</a>
+                        <a class="nav-link aktif" href="<?= base_url() ?>">Anime DB</a>
                     </li>
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="<?= base_url('film') ?>">Film DB</a>

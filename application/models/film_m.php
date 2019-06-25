@@ -5,7 +5,11 @@ class film_m extends CI_Model {
     var $table      = 'list_film'; /*Tabel Anime*/
 
     public function getRecomFilm(){
-        
+        $this->db->from($this->table);
+        $this->db->where('rating >', 6);
+        $this->db->order_by("RAND()");
+        $this->db->limit(5);
+        return $this->db->get()->result();
     }
 
     public function getFilm(){
@@ -17,6 +21,20 @@ class film_m extends CI_Model {
     public function getFilmById($id){
         $this->db->from($this->table);
         $this->db->where(['id_film' => $id]);
+        return $this->db->get()->result();
+    }
+
+    public function get_data(){
+        $this->db->from($this->table);
+        $this->db->order_by('tgl_upload', 'desc');
+        $this->db->limit(12);
+        return $this->db->get()->result();
+    }
+
+    public function get_dataPage($start, $limit){
+        $this->db->from($this->table);
+        $this->db->order_by('tgl_upload', 'desc');
+        $this->db->limit($limit, $start);
         return $this->db->get()->result();
     }
 

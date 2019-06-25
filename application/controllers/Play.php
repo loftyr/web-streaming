@@ -23,4 +23,17 @@ class Play extends CI_Controller {
         $this->load->view('anime/playAnime_v', $data);
         $this->load->view('templates/footer', $datafooter);
     }
+
+    public function film($id) {
+        $dataheader['judul']    = 'Film  DB';
+        $dataheader['css']      = ''; //playFilm-style.css
+        $datafooter['js']       = ''; //playFilm-script.js
+
+        $data['result']         = $this->film_m->getFilmById($id);
+        $data['recom']          = $this->film_m->getRecomFilm();
+        
+        $this->load->view('templates/header', $dataheader);
+        $this->load->view('anime/playFilm_v', $data);
+        $this->load->view('templates/footer', $datafooter);
+    }
 }

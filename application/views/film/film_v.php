@@ -14,7 +14,7 @@
                         <a class="nav-link" href="<?= base_url() ?>">Anime DB</a>
                     </li>
                     <li class="nav-item pr-2">
-                        <a class="nav-link active" href="<?= base_url('film') ?>">Film DB</a>
+                        <a class="nav-link aktif" href="<?= base_url('film') ?>">Film DB</a>
                     </li>
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="">Series DB</a>
@@ -45,22 +45,21 @@
                 <div id="result" class="loading">
                     
                 </div>
-                <div class="row mb-5" id="isi-data">
+                <div class="" id="isi-data">
                     
                 </div>
-                <div class="paging">
-                    <div class="col-sm-12" id="isi-paging">
-                        
-                    </div>
+                
+                <div class="text-center button-load">
+                    <button class="my-button btn-load" dataPage="1">Load More</button>
                 </div>
             </div>
             <div class="col-lg-3 side-body">
                 <h1 class="title-list text-center mr-2">Recommended Film</h1>
 
                 <ul class="list-group mr-2">
-                    <!-- <?php foreach ($ongoing as $data): ?>
-                        <a href="home/anime/<?= $data->id_anime ?>" class="list-group-item"><?= $data->judul_anime ?></a>
-                    <?php endforeach ?> -->
+                    <?php foreach ($recom as $data): ?>
+                        <a href="home/film/<?= $data->id_film ?>" class="list-group-item"><?= $data->judul_film ?></a>
+                    <?php endforeach ?> 
                 </ul>
             </div>
         </div>

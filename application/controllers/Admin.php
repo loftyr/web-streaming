@@ -25,10 +25,7 @@ class Admin extends CI_Controller {
     // Anime
     public function PageAnime(){
         $data["active_link"]    = "anime_v";
-
-        $data['jml_anime']      = $this->anime_m->jml_anime();
-        $data['jml_episode']    = $this->anime_m->jml_episode();
-
+        
         $dataHeader["class_show"]   = "show";
         $dataHeader["class_anime"]  = "active";
         $dataHeader["class_film"]   = "";
@@ -97,9 +94,6 @@ class Admin extends CI_Controller {
     // Anime
     public function PageFilm(){
         $data["active_link"]    = "film_v";
-
-        $data['jml_anime']      = $this->anime_m->jml_anime();
-        $data['jml_episode']    = $this->anime_m->jml_episode();
 
         $dataHeader["class_show"]   = "show";
         $dataHeader["class_anime"]  = "";

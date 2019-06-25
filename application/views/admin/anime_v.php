@@ -129,6 +129,10 @@
               <input type="text" class="form-control" id="Encoder" name="Encoder">
           </div>
           <div class="form-group">
+              <label for="Rating">Rating</label>
+              <input type="text" class="form-control" id="Rating" name="Rating">
+          </div>
+          <div class="form-group">
             <label for="Img">Image</label>
             <input type="file" class="form-control-file col-sm-4" id="Img" name="Img">
             <img src="" class="img-preview">

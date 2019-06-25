@@ -60,14 +60,22 @@
     text-decoration: none;
 }
 
-.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.judul {
+
 }
 
-.judul {
-    min-height: 78px;
+.genre {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-44%, -50%);
+    font-size: 12px;
+}
+
+.btn-detail {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-15%, 20%);
 }

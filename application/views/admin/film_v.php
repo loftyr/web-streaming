@@ -94,7 +94,7 @@
             <label for="Img">Image</label>
             <input type="file" class="form-control-file col-sm-4" id="Img" name="Img">
             <img src="" class="img-preview">
-            <small id="info" class="form-text text-muted">Max Ukuran Image 250 x 150</small>
+            <small id="info" class="form-text text-muted">Penting !!! Resolusi Gambar 480x720 pixel</small>
           </div>
         </form>
 

@@ -21,8 +21,6 @@ class Anime extends CI_Controller {
         $this->form_validation->set_rules('Sinopsis', 'Sinopsis', 'required');
         $this->form_validation->set_rules('Genre', 'Genre', 'required');
         $this->form_validation->set_rules('Studio', 'Studio', 'required');
-        $this->form_validation->set_rules('Uploader', 'Uploader', 'required');
-        $this->form_validation->set_rules('Encoder', 'Encoder', 'required');
 
         $config['upload_path']      = '././file/upload/';
         $config['allowed_types']    = 'jpg|png';
@@ -46,7 +44,8 @@ class Anime extends CI_Controller {
                     'genre'         => htmlspecialchars($this->input->post('Genre')),
                     'studio'        => htmlspecialchars($this->input->post('Studio')),
                     'encoder'       => htmlspecialchars($this->input->post('Encoder')),
-                    'uploader'      => htmlspecialchars($this->input->post('Uploader'))
+                    'uploader'      => htmlspecialchars($this->input->post('Uploader')),
+                    'rating'        => htmlspecialchars($this->input->post('Rating'))
                     ];                
             }else{
                 $data = [
@@ -57,7 +56,8 @@ class Anime extends CI_Controller {
                     'genre'         => htmlspecialchars($this->input->post('Genre')),
                     'studio'        => htmlspecialchars($this->input->post('Studio')),
                     'encoder'       => htmlspecialchars($this->input->post('Encoder')),
-                    'uploader'      => htmlspecialchars($this->input->post('Uploader'))
+                    'uploader'      => htmlspecialchars($this->input->post('Uploader')),
+                    'rating'        => htmlspecialchars($this->input->post('Rating'))
                     ];
             }
 
@@ -88,8 +88,6 @@ class Anime extends CI_Controller {
         $this->form_validation->set_rules('Sinopsis', 'Sinopsis', 'required');
         $this->form_validation->set_rules('Genre', 'Genre', 'required');
         $this->form_validation->set_rules('Studio', 'Studio', 'required');
-        $this->form_validation->set_rules('Uploader', 'Uploader', 'required');
-        $this->form_validation->set_rules('Encoder', 'Encoder', 'required');
 
         $config['upload_path']      = '././file/upload/';
         $config['allowed_types']    = 'jpg|png';
@@ -115,7 +113,8 @@ class Anime extends CI_Controller {
                         'genre'         => htmlspecialchars($this->input->post('Genre')),
                         'studio'        => htmlspecialchars($this->input->post('Studio')),
                         'encoder'       => htmlspecialchars($this->input->post('Encoder')),
-                        'uploader'      => htmlspecialchars($this->input->post('Uploader'))
+                        'uploader'      => htmlspecialchars($this->input->post('Uploader')),
+                        'rating'        => htmlspecialchars($this->input->post('Rating'))
                         ];                
                 }else{
                     $result['Msg']       = $this->upload->display_errors();
@@ -130,7 +129,8 @@ class Anime extends CI_Controller {
                     'genre'         => htmlspecialchars($this->input->post('Genre')),
                     'studio'        => htmlspecialchars($this->input->post('Studio')),
                     'encoder'       => htmlspecialchars($this->input->post('Encoder')),
-                    'uploader'      => htmlspecialchars($this->input->post('Uploader'))
+                    'uploader'      => htmlspecialchars($this->input->post('Uploader')),
+                    'rating'        => htmlspecialchars($this->input->post('Rating'))
                     ];
             }
 
