@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'Pacifico-Regular';
-    src: url('../google-font/Pacifico-Regular.ttf');
-    src: url('../google-font/Pacifico-Regular.ttf') format('ttf'),
-         url('../google-font/Pacifico-Regular.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'Radiant';
     src: url('../google-font/Radiant.ttf');
     src: url('../google-font/Radiant.ttf') format('ttf'),

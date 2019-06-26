@@ -88,13 +88,16 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and (max-width: 480px) {
     .img-right{
         transform: translate(-20%, -30%);
     }
 }
 
-@media (max-width: 750px) {
+@media (min-width: 481px) and (max-width: 750px) {
+    .genre {
+        transform: translate(-27%, -50%);
+    }
     .col-sm-6{
         max-width: 100%;
     }
@@ -107,7 +110,7 @@
     }
 }
 
-@media (max-width: 780px) {
+@media (min-width: 751px) and (max-width: 780px) {
     .genre {
         transform: translate(-27%, -50%);
     }

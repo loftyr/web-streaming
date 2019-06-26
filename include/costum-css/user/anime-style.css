@@ -75,7 +75,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and (max-width: 480px) {
     .img-list{
         max-width: 150px;
         transform: translate(0%, 5%);
@@ -98,7 +98,7 @@
     }
 }
 
-@media (max-width: 780px) {
+@media (min-width: 481px) and (max-width: 780px) {
     .img-list{
         max-width: 160px;
         transform: translate(0%, 4%);

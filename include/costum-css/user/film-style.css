@@ -149,9 +149,9 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 780px) {
+@media (min-width: 481px) and  (max-width: 780px) {
     .card-list{
-        max-height: 220px;
+        max-height: 170px;
         margin-right: 20px;
     }
     
@@ -160,7 +160,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and  (max-width: 480px) {
     .card-list{
         width: 180px;
         max-height: 220px;
@@ -172,7 +172,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 361px) and (max-width: 400px) {
     .card-list{
         width: 150px;
         max-height: 220px;
