@@ -17,7 +17,7 @@ function draw_data(result){
         div     += '<img class="img-card" src="file/upload/'+ url_img +'" alt="">';
         div     += '</div>';
         div     += '<div class="info-card">';
-        div     += '<a class="text-center judul" href="home/anime/'+ id +'" target="_blank">'+ judul +'</a>';
+        div     += '<a class="judul text-center" href="home/anime/'+ id +'" target="_blank">'+ judul +'</a>';
         div     += '<span class="genre">'+genre+'</span>'
         div     += '<div class="btn-detail"><button class="myButton detail" dataID="'+id+'">Lihat Detail</button></div>';
         div     += '</div>';

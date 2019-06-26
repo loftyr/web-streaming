@@ -136,3 +136,44 @@
     background: -moz-linear-gradient(top, #450505, #450505);
     background: linear-gradient(to bottom, #450505, #450505);
 }
+
+@media (max-width: 780px) {
+    .card-list{
+        max-height: 220px;
+        margin-right: 20px;
+    }
+    
+    #isi-data{
+        padding-left: 14%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-list{
+        width: 180px;
+        max-height: 220px;
+        margin-right: 10px;
+    }
+
+    #isi-data{
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-list{
+        width: 150px;
+        max-height: 220px;
+        margin-right: 10px;
+    }
+
+    #isi-data{
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 360px) {
+    #isi-data{
+        padding-left: 5%;
+    }
+}

@@ -55,9 +55,11 @@
 }
 
 .info-card a{
-    font-family: 'Pacifico-Regular';
+    font-family: 'CookbookTitle';
     display: block;
     text-decoration: none;
+    color: black;
+    font-size: 18px;
 }
 
 .judul {
@@ -78,4 +80,22 @@
     top: 70%;
     left: 50%;
     transform: translate(-15%, 20%);
+}
+
+@media (max-width: 400px) {
+    .genre {
+        transform: translate(-27%, -50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .img-right{
+        transform: translate(-20%, -30%);
+    }
+}
+
+@media (max-width: 780px) {
+    .genre {
+        transform: translate(-27%, -50%);
+    }
 }
