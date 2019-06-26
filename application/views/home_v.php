@@ -60,6 +60,9 @@
                         
                     </div>
                 </div>
+                <div id="line-side-body">
+        
+                </div>
             </div>
             <div class="col-lg-3 side-body">
                 <h1 class="title-list text-center mr-2">Anime Ongoing</h1>

@@ -94,6 +94,19 @@
     }
 }
 
+@media (max-width: 750px) {
+    .col-sm-6{
+        max-width: 100%;
+    }
+    #isi-data {
+        display: inline-block;
+        width: 100%;
+    }
+    .genre {
+        width: 100%;
+    }
+}
+
 @media (max-width: 780px) {
     .genre {
         transform: translate(-27%, -50%);

@@ -9,10 +9,10 @@ function draw_data(result){
         div    += '<img class="img" src="../../file/upload/'+result[index].url_img+'" alt="Gambar">';
         div    += '</div>';
         div    += '<div class="info-card pl-3">';
-        div    += '<a href="../../play/anime/'+result[index].no_id+'" target="_blank">'+result[index].judul_episode+'</a>';
+        div    += '<a href="../../play/anime/'+result[index].no_id+'">'+result[index].judul_episode+'</a>';
         div    += '<div class="genre pt-2">'+result[index].genre+'</div>';
         div    += '<p class="pt-2 mb-0 pb-0 alur">'+result[index].alur_cerita.substr(0, 200)+'. . .</p>';
-        div    += '<div class="pt-4">'+result[index].tgl_upload+'</div>';
+        div    += '<div class="pt-4 tanggal">'+result[index].tgl_upload+'</div>';
         div    += '<div class="pt-4"><button class="myButton mr-2 tonton" dataID="'+result[index].no_id+'">Streaming</button><button class="myButton download" dataID="'+result[index].no_id+'">Download</button></div>';
         div    += '</div>';
         div    += '</div>';
@@ -49,10 +49,10 @@ $(document).ready(function(){
 
 $(document).on("click", ".download", function(){
     var id = $(this).attr('dataID');
-    window.open('../../anime/download/'+id, '_blank');
+    window.location = '../../anime/download/'+id;
 });
 
 $(document).on("click", ".tonton", function(){
     var id = $(this).attr('dataID');
-    window.open('../../play/anime/'+id, '_blank');
+    window.location = '../../play/anime/'+id;
 });

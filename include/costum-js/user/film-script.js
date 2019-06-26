@@ -102,9 +102,10 @@ const btnLoad = document.querySelector('.btn-load');
 
 btnLoad.addEventListener('click', function(){
     var page = $(this).attr('dataPage');
+    var base = $(this).attr('baseURL');
     var next = parseInt(page) + 1;
     $(".btn-load").attr("dataPage", next);
-
+    $("#load").attr('disabled', '');
     $(".btn-load").html('loading . . .');
     $.ajax({
         url: 'film/loadPage/'+next,
@@ -122,6 +123,7 @@ btnLoad.addEventListener('click', function(){
             }else{
                 draw_dataPage(response);
             }
+            $("#load").removeAttr('disabled', '');
             $(".btn-load").html('Load More');
         }
     });

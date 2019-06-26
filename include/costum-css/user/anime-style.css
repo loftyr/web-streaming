@@ -44,14 +44,80 @@
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 400px) {
     .img-list{
         max-width: 100px;
         transform: translate(0%, 20%);
     }
+    
+    .info-card a{
+        font-size: 14px;
+    }
 
     .card-list{
         margin-right: 5px;
-        margin-left: 5px;
+    }
+    
+    .genre{
+        font-size: 12px;
+    }
+    
+    .alur{
+        font-size: 13px;
+    }
+
+    .myButton {
+        padding: 3px 20px;
+    }
+
+    .tanggal {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-list{
+        max-width: 150px;
+        transform: translate(0%, 5%);
+    }
+
+    .genre{
+        font-size: 12px;
+    }
+    
+    .alur{
+        font-size: 13px;
+    }
+
+    .myButton {
+        padding: 3px 20px;
+    }
+
+    .tanggal {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 780px) {
+    .img-list{
+        max-width: 160px;
+        transform: translate(0%, 4%);
+    }
+
+    .genre{
+        font-size: 13px;
+    }
+    
+    .alur{
+        font-size: 14px;
+    }
+
+    .myButton {
+        margin-top: 20px;
+        padding: 3px 24px;
+    }
+
+    .tanggal {
+        font-size: 14px;
     }
 }

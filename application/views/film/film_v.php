@@ -50,7 +50,10 @@
                 </div>
                 
                 <div class="text-center button-load">
-                    <button class="my-button btn-load" dataPage="1">Load More</button>
+                    <button class="my-button btn-load" id="load" dataPage="1">Load More</button>
+                </div>
+                <div id="line-side-body">
+        
                 </div>
             </div>
             <div class="col-lg-3 side-body">

@@ -99,6 +99,10 @@
     padding-top: 10px;
 }
 
+.load{
+    position: relative;
+    width: 60px;
+}
 
 .my-button {
     display: inline-block;
@@ -135,6 +139,14 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#450505), to(#450505));
     background: -moz-linear-gradient(top, #450505, #450505);
     background: linear-gradient(to bottom, #450505, #450505);
+}
+
+.my-button:disabled,
+.my-button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
 }
 
 @media (max-width: 780px) {
