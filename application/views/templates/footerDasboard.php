@@ -38,7 +38,7 @@
     <script src="<?= base_url('include/datatables/jquery.dataTables.min.js') ?>"></script>
     <script src="<?= base_url('include/datatables/dataTables.bootstrap4.min.js') ?>"></script>
     <script src="<?= base_url('include/JqueryUI/jquery-ui.js') ?>"></script>
-    <script src="<?= base_url('include/sweetAlert2/sweetAlert2.all.min.js') ?>"></script>
+    <script src="<?= base_url('include/sweetAlert2/sweetalert2.all.min.js') ?>"></script>
     <script src="<?= base_url('include/chart.js/Chart.min.js'); ?>"></script>
 
     <!-- Costum JS -->

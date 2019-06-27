@@ -14,8 +14,11 @@
                         <a class="nav-link" href="<?= base_url() ?>">Anime DB</a>
                     </li>
                     <li class="nav-item pr-2">
-                        <a class="nav-link aktif" href="<?= base_url('film') ?>">Film DB</a>
+                        <a class="nav-link" href="<?= base_url('film') ?>">Film DB</a>
                     </li>
+                    <!-- <li class="nav-item pr-2">
+                        <a class="nav-link" href="">Series DB</a>
+                    </li> -->
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="<?= base_url('manga') ?>">Manga DB</a>
                     </li>
@@ -40,30 +43,57 @@
     </div>
 
     <div id="body" class="shadow">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="<?= base_url('manga') ?>">Manga DB</a></li>
+                        <li class="breadcrumb-item">View</li>
+                        <li class="breadcrumb-item active" aria-current="page">DanMachi</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Deskripsi -->
+        <div class="col-lg-12 mt-4">
+            <h4 class="text-center">Deskripsi Manga</h4>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Judul</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Genre</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Sinopsis</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Upload</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
         <div class="row pt-2 pb-2">
-            <div class="col-lg-9 main-body">
-                <div id="result" class="loading">
-                    
+            <div class="col-lg-12 main-body">
+                <div class="mb-5" id="isi-data">
+                    <div class="view">
+                        <iframe class="view-manga" src="https://drive.google.com/file/d/1Doe0a7Svr4VQfabGfW7-MxHSMMmDt1w6/preview" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="" id="isi-data">
+                <div class="paging">
                     
-                </div>
-                
-                <div class="text-center button-load">
-                    <button class="my-button btn-load" id="load" dataPage="1">Load More</button>
                 </div>
                 <div id="line-side-body">
         
                 </div>
-            </div>
-            <div class="col-lg-3 side-body">
-                <h1 class="title-list text-center mr-2">Recommended Film</h1>
-
-                <ul class="list-group mr-2">
-                    <?php foreach ($recom as $data): ?>
-                        <a href="home/film/<?= $data->id_film ?>" class="list-group-item"><?= $data->judul_film ?></a>
-                    <?php endforeach ?> 
-                </ul>
             </div>
         </div>
     </div>

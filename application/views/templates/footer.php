@@ -5,7 +5,7 @@
         <script src="<?= base_url('include/bootstrap/js/bootstrap.js') ?>"></script>
         <script src="<?= base_url('include/jquery.timeago.js') ?>"></script>
         <script src="<?= base_url('include/costum-js/base-script.js') ?>"></script>
-        <script src="<?= base_url('include/sweetAlert2/sweetAlert2.all.min.js') ?>"></script>
+        <script src="<?= base_url('include/sweetAlert2/sweetalert2.all.min.js') ?>"></script>
         <!-- Costum Script -->
         <?php if ($js == ''): ?>
 

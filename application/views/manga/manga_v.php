@@ -14,10 +14,13 @@
                         <a class="nav-link" href="<?= base_url() ?>">Anime DB</a>
                     </li>
                     <li class="nav-item pr-2">
-                        <a class="nav-link aktif" href="<?= base_url('film') ?>">Film DB</a>
+                        <a class="nav-link" href="<?= base_url('film') ?>">Film DB</a>
                     </li>
+                    <!-- <li class="nav-item pr-2">
+                        <a class="nav-link" href="">Series DB</a>
+                    </li> -->
                     <li class="nav-item pr-2">
-                        <a class="nav-link" href="<?= base_url('manga') ?>">Manga DB</a>
+                        <a class="nav-link aktif" href="<?= base_url('manga') ?>">Manga DB</a>
                     </li>
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="">Support Us</a>
@@ -42,27 +45,21 @@
     <div id="body" class="shadow">
         <div class="row pt-2 pb-2">
             <div class="col-lg-9 main-body">
-                <div id="result" class="loading">
+                <div class="row mb-5" id="isi-data">
                     
                 </div>
-                <div class="" id="isi-data">
+                <div class="paging">
                     
-                </div>
-                
-                <div class="text-center button-load">
-                    <button class="my-button btn-load" id="load" dataPage="1">Load More</button>
                 </div>
                 <div id="line-side-body">
         
                 </div>
             </div>
             <div class="col-lg-3 side-body">
-                <h1 class="title-list text-center mr-2">Recommended Film</h1>
+                <h1 class="title-list text-center mr-2">Last Update</h1>
 
                 <ul class="list-group mr-2">
-                    <?php foreach ($recom as $data): ?>
-                        <a href="home/film/<?= $data->id_film ?>" class="list-group-item"><?= $data->judul_film ?></a>
-                    <?php endforeach ?> 
+                    
                 </ul>
             </div>
         </div>

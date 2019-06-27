@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?= base_url('include/bootstrap/css/bootstrap.css') ?>">
 
     <!-- Sweet Alert 2 CSS -->
-    <link rel="stylesheet" href="<?= base_url('include/sweetAlert2/sweetAlert2.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('include/sweetAlert2/sweetalert2.min.css') ?>">
 
     <!-- Datepicker CSS -->
     <link rel="stylesheet" href="<?= base_url('include/JqueryUI/jquery-ui.css') ?>">

@@ -16,7 +16,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<?= base_url('include/bootstrap/css/bootstrap.css') ?>">
         <!-- Sweet Alert 2 CSS -->
-        <link rel="stylesheet" href="<?= base_url('include/sweetAlert2/sweetAlert2.min.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('include/sweetAlert2/sweetalert2.min.css') ?>">
         <!-- Animate CSS -->
         <link rel="stylesheet" href="<?= base_url('include/animate.css') ?>">
         <!-- Fontawesome -->

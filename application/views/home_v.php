@@ -23,8 +23,11 @@
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="<?= base_url('film') ?>">Film DB</a>
                     </li>
-                    <li class="nav-item pr-2">
+                    <!-- <li class="nav-item pr-2">
                         <a class="nav-link" href="">Series DB</a>
+                    </li> -->
+                    <li class="nav-item pr-2">
+                        <a class="nav-link" href="<?= base_url('manga') ?>">Manga DB</a>
                     </li>
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="">Support Us</a>
