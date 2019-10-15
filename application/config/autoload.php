@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |   $autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('anime_m', 'home_m', 'film_m');
+$autoload['model'] = array('anime_m', 'home_m', 'film_m', 'manga_m');

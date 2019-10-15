@@ -28,8 +28,9 @@ class Anime extends CI_Controller {
         $config['encrypt_name']     = true;
 
         if ($this->form_validation->run() == false) {
-            $result['Msg'] = 'Please Fill All Field !!!';
-            $result['Status'] = false;
+            $result['Msg']          = 'Please Fill All Field !!!';
+            $result['MsgUpload']    = '';
+            $result['Status']       = false;
         }else{
             $this->upload->initialize($config);
             if($this->upload->do_upload("Img")){

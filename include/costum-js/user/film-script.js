@@ -18,11 +18,9 @@ function draw_data(result){
             var url     = 'file/upload/'+url_img+'';
         }
 
-        delay += 1;
-
         var tgl_ago = jQuery.timeago(tgl);
         
-        var div = '<a href="play/film/'+id+'" class="col-sm-3 card-list shadow animated fadeIn">';
+        var div = '<a href="play/film/'+id+'" class="col-sm-3 card-list shadow animated fadeIn delay-04s">';
         div     += '<div class="img-list">';
         div     += '<img src="'+url+'" alt="Gambar">';
         div     += '</div>';

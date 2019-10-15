@@ -45,8 +45,42 @@
     <div id="body" class="shadow">
         <div class="row pt-2 pb-2">
             <div class="col-lg-9 main-body">
-                <div class="row mb-5" id="isi-data">
+                <div class="" id="isi-data">
                     
+                    <?php foreach ($manga as $data): ?>
+                        <div class="card-list mb-3 ml-2 animated zoomIn delay-0'+delay+'s flex-container">
+                            <div class="img-list">
+                                <img class="img" src="<?= base_url('file/upload/'.$data->url_img) ?>" alt="Gambar">
+                            </div>
+                            <div class="info-card pl-2">
+                                <div class="bagian-atas align-items-start">
+                                    <a class="judul" href="<?= base_url('data/chapter/') ?>"><?= $data->judul_manga ?></a>
+                                    <div class="genre">
+                                        <?= $data->genre ?>
+                                    </div>
+                                    <div class="sinopsis">
+                                        <?= substr($data->alur_cerita, 0, 255) ?> . . .
+                                    </div>
+                                </div>
+                                <div class="bagian-bawah align-items-end">
+                                    <div class="chap">
+                                        <a href="">Chapter 1</a>
+                                    </div>
+                                    <div class="chap">
+                                        <a href="">Chapter 2</a>
+                                    </div>
+                                    <div class="chap">
+                                        <a href="">Chapter 3</a>
+                                    </div>
+                                    
+                                    <div class="pt-3">
+                                        <button dataURL="<?= base_url() ?>" class="myButton mr-2 all-chap" dataID="'+result[index].no_id+'">All Chapter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+
                 </div>
                 <div class="paging">
                     

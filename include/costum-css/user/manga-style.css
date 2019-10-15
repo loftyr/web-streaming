@@ -1,0 +1,55 @@
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-list{
+    overflow: hidden;
+    transition: .3s;
+}
+
+.img-list {
+    max-width: 20%;
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.img{
+    position: relative;
+    width: 100%;
+}
+
+.info-card a.judul {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.chap {
+    border: 1.2px white solid;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    max-width: 150px;
+    text-align: center;
+
+}
+
+.chap a {
+    text-decoration: none;
+}
+
+.info-card {
+    position: relative;
+    max-width: 80%;
+    overflow: hidden;
+    display: inline-grid;
+}
+
+.card-list:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1024px){
+    .sinopsis {
+        display: none;
+    }
+}

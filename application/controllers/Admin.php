@@ -2,6 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
+    
+    public $dataHeader;
+
+    function __construct() {
+        parent::__construct();
+        $this->dataHeader = array(
+            'class_show' => '', 
+            'class_anime' => '',
+            'class_film' => '',
+            'class_series' => '',
+            'class_manga' => '',
+            'css' => '');
+    }
 
     public function dashboard(){
         $data["active_link"]    = "home_v";
@@ -9,15 +22,10 @@ class Admin extends CI_Controller {
         $data['jml_anime']      = $this->anime_m->jml_anime();
         $data['jml_episode']    = $this->anime_m->jml_episode();
 
-        $dataHeader["class_show"]   = "";
-        $dataHeader["class_anime"]  = "";
-        $dataHeader["class_film"]   = "";
-        $dataHeader["class_series"] = "";
+        $this->dataHeader["css"]    = "dashboard-home-style.css";
+        $dataFooter['js']           = "dashboard-home-script.js"; //chart JS
 
-        $dataHeader["css"]          = "dashboard-home-style.css";
-        $dataFooter['js']           = "dashboard-home-script.js";
-
-        $this->load->view('templates/headerDasboard', $dataHeader);
+        $this->load->view('templates/headerDasboard', $this->dataHeader);
         $this->load->view('admin/dashboard_v', $data);
         $this->load->view('templates/footerDasboard', $dataFooter);
     }
@@ -26,15 +34,12 @@ class Admin extends CI_Controller {
     public function PageAnime(){
         $data["active_link"]    = "anime_v";
         
-        $dataHeader["class_show"]   = "show";
-        $dataHeader["class_anime"]  = "active";
-        $dataHeader["class_film"]   = "";
-        $dataHeader["class_series"] = "";
+        $this->dataHeader["class_show"]   = "show";
+        $this->dataHeader["class_anime"]  = "active";
 
-        $dataHeader["css"]          = "";
         $dataFooter['js']           = "dashboard-anime-script.js";
 
-        $this->load->view('templates/headerDasboard', $dataHeader);
+        $this->load->view('templates/headerDasboard', $this->dataHeader);
         $this->load->view('admin/dashboard_v', $data);
         $this->load->view('templates/footerDasboard', $dataFooter);
     }
@@ -91,20 +96,34 @@ class Admin extends CI_Controller {
 
     // Akhir Anime
 
-    // Anime
+    // Film
     public function PageFilm(){
         $data["active_link"]    = "film_v";
 
-        $dataHeader["class_show"]   = "show";
-        $dataHeader["class_anime"]  = "";
-        $dataHeader["class_film"]   = "active";
-        $dataHeader["class_series"] = "";
+        $this->dataHeader["class_show"]   = "show";
+        $this->dataHeader["class_film"]   = "active";
 
-        $dataHeader["css"]          = "";
         $dataFooter['js']           = "dashboard-film-script.js"; //
 
-        $this->load->view('templates/headerDasboard', $dataHeader);
+        $this->load->view('templates/headerDasboard', $this->dataHeader);
         $this->load->view('admin/dashboard_v', $data);
         $this->load->view('templates/footerDasboard', $dataFooter);
     }
+    // Akhir Film
+
+    // Manga
+    public function PageManga(){
+        $data["active_link"]    = "manga_v";
+
+        $this->dataHeader["class_show"]   = "show";
+        $this->dataHeader["class_manga"]  = "active";
+
+        $this->dataHeader["css"]          = "";
+        $dataFooter['js']                 = "dashboard-manga-script.js"; //
+
+        $this->load->view('templates/headerDasboard', $this->dataHeader);
+        $this->load->view('admin/dashboard_v', $data);
+        $this->load->view('templates/footerDasboard', $dataFooter);
+    }
+    // Akhir Manga    
 }

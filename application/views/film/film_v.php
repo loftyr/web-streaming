@@ -61,7 +61,7 @@
 
                 <ul class="list-group mr-2">
                     <?php foreach ($recom as $data): ?>
-                        <a href="home/film/<?= $data->id_film ?>" class="list-group-item"><?= $data->judul_film ?></a>
+                        <a href="play/film/<?= $data->id_film ?>" class="list-group-item"><?= $data->judul_film ?></a>
                     <?php endforeach ?> 
                 </ul>
             </div>

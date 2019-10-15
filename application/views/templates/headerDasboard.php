@@ -78,7 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h6 class="collapse-header">Movie DB</h6>
                     <a class="collapse-item <?= $class_anime; ?>" data-link="anime" id="anime" href="<?= base_url('admin/PageAnime') ?>">Anime</a>
                     <a class="collapse-item <?= $class_film; ?>" data-link="film" id="film" href="<?= base_url('admin/PageFilm') ?>">Film</a>
-                    <a class="collapse-item <?= $class_series; ?>" data-link="series" id="series" href="#">Film Series</a>
+                    <!-- <a class="collapse-item <?= $class_series; ?>" data-link="series" id="series" href="#">Film Series</a> -->
+                    <a class="collapse-item <?= $class_manga; ?>" data-link="manga" id="manga" href="<?= base_url('admin/PageManga') ?>">Manga</a>
                 </div>
             </div>
         </li>

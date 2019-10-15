@@ -6,6 +6,7 @@
         <script src="<?= base_url('include/jquery.timeago.js') ?>"></script>
         <script src="<?= base_url('include/costum-js/base-script.js') ?>"></script>
         <script src="<?= base_url('include/sweetAlert2/sweetalert2.all.min.js') ?>"></script>
+        <script src="<?= base_url('include/jquery.easing.1.3.js') ?>"></script>
         <!-- Costum Script -->
         <?php if ($js == ''): ?>
 

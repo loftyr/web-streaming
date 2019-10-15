@@ -43,49 +43,33 @@
     </div>
 
     <div id="body" class="shadow">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= base_url('manga') ?>">Manga DB</a></li>
-                        <li class="breadcrumb-item">View</li>
-                        <li class="breadcrumb-item active" aria-current="page">DanMachi</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Deskripsi -->
-        <div class="col-lg-12 mt-4">
-            <h4 class="text-center">Deskripsi Manga</h4>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th>Judul</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>Genre</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>Sinopsis</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Upload</th>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
+                
         <div class="row pt-2 pb-2">
-            <div class="col-lg-12 main-body">
-                <div class="mb-5" id="isi-data">
-                    <div class="view">
-                        <iframe class="view-manga" frameborder="0"src="" allowfullscreen></iframe>
+            <div class="col-lg-9 main-body">
+                <div class="" id="isi-data">
+                    <!-- Deskripsi -->
+                    <div class="col-lg-12 mt-4">
+                        <h4 class="text-center">Deskripsi Manga</h4>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Judul</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Genre</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Sinopsis</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Tanggal Upload</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="paging">
@@ -95,25 +79,13 @@
         
                 </div>
             </div>
-        </div>
+            <div class="col-lg-3 side-body">
+                <h1 class="title-list text-center mr-2">Last Update</h1>
 
-        <div id="view-paging" class="">
-            <a href="" class="prev btn btn-outline-primary disabled">
-                <span class="fas fa-arrow-alt-circle-left"></span>
-                Prev
-            </a>
-
-            <a href="" class="next btn btn-outline-primary disabled" >
-                Next
-                <span class="fas fa-arrow-alt-circle-right"></span>
-            </a>
-        </div>
-
-        <!-- Top -->
-        <div class="top">
-            <button class="btn-top">
-                <i class="far fa-arrow-alt-circle-up"></i>
-            </button>
+                <ul class="list-group mr-2">
+                    
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -123,6 +95,5 @@
                 <p class="text-white text-center mt-4">&copy; Anime DB</p>
             </div>
         </div>
-    </div>    
+    </div>
 </div> <!-- Akhir container -->
-
