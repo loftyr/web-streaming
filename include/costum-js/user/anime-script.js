@@ -31,8 +31,12 @@ function getAllData(no){
         dataType: 'JSON',
         success: function(response){
             $("#img-loading").removeClass('fadeIn').addClass('fadeOut');
-            draw_data(response.result);
-            $('#paging').html(response.pagination);
+            if (response.result == '') {
+                $('#isi-data').html('<div class="alert alert-danger ml-2" role="alert">No Data !!!</div>');
+            }else{
+                draw_data(response.result);
+                $('#paging').html(response.pagination);
+            }
         }
     });
 }

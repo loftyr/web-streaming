@@ -5,6 +5,7 @@ class Film extends CI_Controller {
 
     public function index(){
         $dataheader['judul']    = 'Film DB';
+        $dataheader['css_film']      = 'aktif';
         $dataheader['css']      = 'film-style.css'; //
         $datafooter['js']       = 'film-script.js'; //
 

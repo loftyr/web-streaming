@@ -49,7 +49,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= base_url('manga') ?>">Manga DB</a></li>
                         <li class="breadcrumb-item">View</li>
-                        <li class="breadcrumb-item active" aria-current="page">DanMachi</li>
+                        <li class="breadcrumb-item active" aria-current="page"><?= $manga[0]->judul_chapter; ?></li>
                     </ol>
                 </nav>
             </div>
@@ -62,7 +62,7 @@
                 <tbody>
                     <tr>
                         <th>Judul</th>
-                        <td></td>
+                        <td><?= $manga[0]->judul_chapter; ?></td>
                     </tr>
                     <tr>
                         <th>Genre</th>
@@ -85,7 +85,8 @@
             <div class="col-lg-12 main-body">
                 <div class="mb-5" id="isi-data">
                     <div class="view">
-                        <iframe class="view-manga" frameborder="0"src="" allowfullscreen></iframe>
+                        <!-- <iframe class="view-manga" frameborder="0" src="" allowfullscreen scrolling='auto'></iframe> -->
+                        <iframe class="view-manga" frameborder="0" src="<?= $manga[0]->link; ?>" allowfullscreen scrolling='auto'></iframe>
                     </div>
                 </div>
                 <div class="paging">

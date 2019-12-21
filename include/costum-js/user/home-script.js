@@ -8,6 +8,12 @@ function draw_data(result){
         var genre   = result[index].genre;
         var rating  = result[index].rating;
         var url_img = result[index].url_img;
+        var alurr;
+        if (alur.length > 150) {
+            alurr = alur.substr(0, 150) + '. . . .';
+        }else{
+            alurr = alur;
+        }
 
         delay += 1;
         
@@ -17,9 +23,10 @@ function draw_data(result){
         div     += '<img class="img-card" src="file/upload/'+ url_img +'" alt="">';
         div     += '</div>';
         div     += '<div class="info-card">';
-        div     += '<a class="judul text-center" href="home/anime/'+ id +'" target="_blank">'+ judul +'</a>';
+        div     += '<a class="<jud></jud>ul text-center" href="home/anime/'+ id +'">'+ judul +'</a>';
+        div     += '<span class="alur">'+ alurr +'</span>'
         div     += '<span class="genre">'+genre+'</span>'
-        div     += '<div class="btn-detail"><button class="myButton detail" dataID="'+id+'">Lihat Detail</button></div>';
+        // div     += '<div class="btn-detail"><button class="myButton detail" dataID="'+id+'">Lihat Detail</button></div>';
         div     += '</div>';
         div     += '</div>';
         div     += '</div>';

@@ -29,6 +29,7 @@
 
 .card-list {
     position: relative;
+    display: flex;
     overflow: hidden;
     max-height: 130px;
 }
@@ -54,6 +55,10 @@
     font-size: 12px;
 }
 
+.info-card {
+    width: 100%;
+}
+
 .info-card a{
     font-family: 'CookbookTitle';
     display: block;
@@ -66,13 +71,19 @@
 
 }
 
-.genre {
-    position: absolute;
-    width: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-44%, -50%);
+.alur {
+    position: relative;
+    display: block;
     font-size: 12px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.genre {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    padding-left: 10px;
 }
 
 .btn-detail {

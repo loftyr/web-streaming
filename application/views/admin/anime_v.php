@@ -77,7 +77,7 @@
 
 <!-- Modal -->
 <div class="modal fade" tabindex="-1" id="modal-anime" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <!-- Bagian Judul Modal -->
       <div class="modal-header">

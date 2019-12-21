@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2019 at 05:07 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.0.29
+-- Waktu pembuatan: 21 Des 2019 pada 04.11
+-- Versi server: 10.4.8-MariaDB
+-- Versi PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,14 +25,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_anime`
+-- Struktur dari tabel `list_anime`
 --
 
 CREATE TABLE `list_anime` (
   `id_anime` int(11) NOT NULL,
   `judul_anime` varchar(255) NOT NULL,
   `status` varchar(11) CHARACTER SET utf8 NOT NULL,
-  `alur_cerita` text,
+  `alur_cerita` text DEFAULT NULL,
   `url_img` varchar(255) NOT NULL,
   `genre` varchar(255) DEFAULT NULL,
   `studio` varchar(100) DEFAULT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `list_anime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `list_anime`
+-- Dumping data untuk tabel `list_anime`
 --
 
 INSERT INTO `list_anime` (`id_anime`, `judul_anime`, `status`, `alur_cerita`, `url_img`, `genre`, `studio`, `encoder`, `uploader`, `rating`) VALUES
@@ -61,21 +61,41 @@ INSERT INTO `list_anime` (`id_anime`, `judul_anime`, `status`, `alur_cerita`, `u
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_chapter_manga`
+-- Struktur dari tabel `list_chapter_manga`
 --
 
 CREATE TABLE `list_chapter_manga` (
   `no_id` int(11) NOT NULL,
   `id_manga` int(11) NOT NULL,
+  `judul_chapter` varchar(225) NOT NULL,
   `chapter` varchar(50) DEFAULT NULL,
   `link` varchar(255) DEFAULT NULL,
   `tgl_upload` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `list_chapter_manga`
+--
+
+INSERT INTO `list_chapter_manga` (`no_id`, `id_manga`, `judul_chapter`, `chapter`, `link`, `tgl_upload`) VALUES
+(1, 4, 'Judul 1', '1', 'https://drive.google.com/file/d/18_dKiGh3U9zPB16HqZY90R9s0IbDzcx_/preview', '2019-10-01 12:25:12'),
+(2, 4, 'Judul 2', '2', 'https://drive.google.com/file/d/18_dKiGh3U9zPB16HqZY90R9s0IbDzcx_/preview', '2019-10-02 12:25:18'),
+(3, 4, 'Judul 3', '3', 'https://drive.google.com/file/d/18_dKiGh3U9zPB16HqZY90R9s0IbDzcx_/preview', '2019-10-03 12:25:21'),
+(4, 4, 'Judul 4', '4', '', '2019-10-18 03:11:29'),
+(5, 4, 'Judul 5', '5', '', '2019-10-18 03:12:04'),
+(6, 4, 'Judul 6', '6', '', '2019-10-18 03:12:21'),
+(7, 4, 'Judul 7', '7', '', '2019-10-19 03:12:36'),
+(8, 4, 'Judul 8', '8', '', '2019-10-19 03:12:49'),
+(9, 4, 'Judul 9', '9', '', '2019-10-19 03:13:03'),
+(10, 4, 'Judul 10', '10', '', '2019-10-19 03:13:16'),
+(11, 4, 'Judul 11', '11', '', '2019-10-19 03:13:36'),
+(12, 4, 'Judul 12', '12', '', '2019-10-19 03:13:52'),
+(13, 4, 'Judul 13', '13', '', '2019-10-19 03:14:11');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_episode_anime`
+-- Struktur dari tabel `list_episode_anime`
 --
 
 CREATE TABLE `list_episode_anime` (
@@ -94,7 +114,7 @@ CREATE TABLE `list_episode_anime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `list_episode_anime`
+-- Dumping data untuk tabel `list_episode_anime`
 --
 
 INSERT INTO `list_episode_anime` (`no_id`, `id_anime`, `episode`, `judul_episode`, `link_gd_fullhd`, `link_gd_hd`, `link_gd_mhd`, `link_zy_fullhd`, `link_zy_hd`, `link_zy_mhd`, `link_streaming`, `tgl_upload`) VALUES
@@ -256,7 +276,7 @@ INSERT INTO `list_episode_anime` (`no_id`, `id_anime`, `episode`, `judul_episode
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_film`
+-- Struktur dari tabel `list_film`
 --
 
 CREATE TABLE `list_film` (
@@ -273,7 +293,7 @@ CREATE TABLE `list_film` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `list_film`
+-- Dumping data untuk tabel `list_film`
 --
 
 INSERT INTO `list_film` (`id_film`, `judul_film`, `alur_cerita`, `genre`, `tahun`, `kualitas`, `rating`, `tgl_upload`, `url_img`, `link_streaming`) VALUES
@@ -294,13 +314,13 @@ INSERT INTO `list_film` (`id_film`, `judul_film`, `alur_cerita`, `genre`, `tahun
 -- --------------------------------------------------------
 
 --
--- Table structure for table `list_manga`
+-- Struktur dari tabel `list_manga`
 --
 
 CREATE TABLE `list_manga` (
   `id_manga` int(11) NOT NULL,
   `judul_manga` varchar(225) CHARACTER SET utf8 NOT NULL,
-  `alur_cerita` text,
+  `alur_cerita` text DEFAULT NULL,
   `status` int(11) NOT NULL,
   `genre` varchar(225) DEFAULT NULL,
   `rating` decimal(10,1) DEFAULT NULL,
@@ -309,90 +329,98 @@ CREATE TABLE `list_manga` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `list_manga`
+-- Dumping data untuk tabel `list_manga`
 --
 
 INSERT INTO `list_manga` (`id_manga`, `judul_manga`, `alur_cerita`, `status`, `genre`, `rating`, `published`, `url_img`) VALUES
-(4, 'Boku no Hero Academia', 'The story is set in the modern day, except people with special powers have become commonplace throughout the world. A boy named Izuku Midoriya has no powers, but he still dreams.', 0, 'Action, Comedy, Parody, School, Shounen, Super Power', '7.0', '2014-07-14 19:42:33', '6b745953f7e63539200dab241d547a5e.jpg'),
-(5, 'Demon Slayer: Kimetsu no Yaiba', 'Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Because of this, the local townsfolk never venture outside at night. Legend has it that a demon slayer also roams the night, hunting down these bloodthirsty demons. For young Tanjirou, these rumors will soon to become his harsh reality...\r\n\r\nEver since the death of his father, Tanjirou has taken it upon himself to support his family. Although their lives may be hardened by tragedy, they\'ve found happiness. But that ephemeral warmth is shattered one day when Tanjirou finds his family slaughtered and the lone survivor, his sister Nezuko, turned into a demon. To his surprise, however, Nezuko still shows signs of human emotion and thought...\r\n\r\nThus begins Tanjirou\'s quest to fight demons and turn his sister human again.', 0, 'Action, Demons, Historical, Shounen, Supernatural', '8.0', '2016-02-15 19:46:20', '8c4ad7ceba56097b0b2730f6a9b34b6d.jpg'),
+(4, 'Boku no Hero Academia', 'The story is set in the modern day, except people with special powers have become commonplace throughout the world. A boy named Izuku Midoriya has no powers, but he still dreams.', 1, 'Action, Comedy, Parody, School, Shounen, Super Power', '7.0', '2014-07-14 05:17:36', NULL),
+(5, 'Demon Slayer: Kimetsu no Yaiba', 'Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Because of this, the local townsfolk never venture outside at night. Legend has it that a demon slayer also roams the night, hunting down these bloodthirsty demons. For young Tanjirou, these rumors will soon to become his harsh reality...\r\n\r\nEver since the death of his father, Tanjirou has taken it upon himself to support his family. Although their lives may be hardened by tragedy, they\'ve found happiness. But that ephemeral warmth is shattered one day when Tanjirou finds his family slaughtered and the lone survivor, his sister Nezuko, turned into a demon. To his surprise, however, Nezuko still shows signs of human emotion and thought...\r\n\r\nThus begins Tanjirou\'s quest to fight demons and turn his sister human again.', 1, 'Action, Demons, Historical, Shounen, Supernatural', '8.0', '2016-02-15 05:16:29', NULL),
 (6, 'World Trigger', 'Earth is under constant threat from Neighbors, invincible monsters from another dimension that destroy our way of life. At least we have the elite warriors of Border, who co-opt alien technology to fight back! Our hero Osamu Mikumo may not be the best agent, but he\'ll do whatever it takes to defend life on Earth as we know it. When Osamu meets a feisty humanoid Neighbor named Yuma, everything that he thinks is right is turned on its head. Can the two natural enemies ever become friends?', 0, 'Action, School, Sci-Fi, Shounen, Space, Supernatural', '8.0', '2013-02-08 19:59:11', 'eeae2f4cea68c00d4edad4b42e86651d.jpg'),
-(7, 'Log Horizon', 'Elder Tale\" is a long-established and popular online game: but the day in which was introduced the 11th expansion pack, 30,000 Japanese users have been confined to the world of the game. In the world that is a fusion of reality and the game, our hero Shiroe begins his fight from the city of Akiba.', 0, 'Action, Adventure, Fantasy, Magic, Sci-Fi', '8.0', '2010-04-13 20:02:35', 'bf676a7ebb6fab62a4a23c2bb0aaf8e4.jpg');
+(7, 'Log Horizon', 'Elder Tale\" is a long-established and popular online game: but the day in which was introduced the 11th expansion pack, 30,000 Japanese users have been confined to the world of the game. In the world that is a fusion of reality and the game, our hero Shiroe begins his fight from the city of Akiba.', 0, 'Action, Adventure, Fantasy, Magic, Sci-Fi', '8.0', '2010-04-13 20:02:35', 'bf676a7ebb6fab62a4a23c2bb0aaf8e4.jpg'),
+(8, 'Utsuro no Hako to Zero no Maria', 'Kazuki Hoshino values his everyday life above all else. He spends the days carefree with his friends at school, until the uneventful bliss suddenly comes to a halt with the transfer of the aloof beauty Aya Otonashi into his class and her cold, dramatic statement to him immediately upon arrival:\r\n\r\n\"I\'m here to break you. This is the 13,118th time I\'ve transferred. After so many occasions, I have to say that this is all starting to grate on me, which is why this time I\'m spicing things up with a proper declaration of war.\"\r\n\r\nAnd with those puzzling words, the ordinary days that Kazuki loved so dearly become a cycle of turmoil and fear—Aya\'s sudden appearance signals the unraveling of unseen mysteries surrounding Kazuki\'s seemingly normal friends, including the discovery of mysterious devices known as \"boxes.\"', 0, 'Action, Mystery, Drama, Horror, Romance, School, Supernatural, Psychological, Thriller', '8.9', '2019-10-17 08:44:36', '492f4300380a452ef5e1826965d5acc1.jpg'),
+(9, 'Solo Leveling', 'Ten years ago, after \"the Gate\" that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as \"Hunters.\" However, not all Hunters are powerful. My name is Sung Jin-Woo, an E-rank Hunter. I\'m someone who has to risk his life in the lowliest of dungeons, the \"World\'s Weakest.\" Having no skills whatsoever to display, I barely earned the required money by fighting in low-leveled dungeons... at least until I found a hidden dungeon with the hardest difficulty within the D-rank dungeons! In the end, as I was accepting death, I suddenly received a strange power, a quest log that only I could see, a secret to leveling up that only I know about! If I trained in accordance with my quests and hunted monsters, my level would rise. Changing from the weakest Hunter to the strongest S-rank Hunter!', 0, 'Action, Adventure, Fantasy', '8.9', '2018-05-04 08:49:43', '9f8a06f55c7371073dc59ab1ffa1e3bf.jpg'),
+(10, 'Yahari Ore no Seishun Love Comedy wa Machigatteiru', 'Hachiman Hikigaya, a student in Soubu High School, is a cynical loner due to his traumatic past experiences in his social life. This eventually led to him developing a set of \"dead fish eyes\" and a twisted personality similar to that of a petty criminal. Believing that the concept of youth is a lie made up by youngsters who face their failures in denial, he turns in an essay that criticizes this exact mentality of youths. Irritated by the submission, his homeroom teacher, Shizuka Hiratsuka forces him to join the Volunteer Service Club—a club that assists students to solve their problems in life, hoping that helping other people would change his personality.\r\n\r\nHowever, Yukino Yukinoshita, the most beautiful girl in school, is surprisingly the sole member of the club and a loner, albeit colder and smarter than Hikigaya. Their club soon expands when Yui Yuigahama joins them after being helped with her plight, and they begin to accept more requests.\r\n\r\nWith his status quo as a recluse, Hikigaya attempts to solve problems in his own way, but his methods may prove to be a double-edged sword.', 0, 'Comedy, Romance, School', '8.0', '2011-03-23 09:04:02', '3e082cfc12c17a8946d5c85ba524602f.jpg'),
+(11, 'Nogi Wakaba wa Yuusha de Aru', 'The story of Nogi Wakaba wa Yuusha de Aru takes place 300 years in the past, in 2018, the first days of the Divine Era. The six main characters form the first ever Hero Team: Nogi Wakaba, Nogi Sonoko\'s ancestor; Uesato Hinata, Takashima Yuna, Koori Chikage, Doi Tamako and Iyojima Anzu.', 0, 'Fantasy, Magic', '8.8', '2015-07-30 09:07:28', '5856a688b6a7d3ec7af02705e3089477.jpg'),
+(12, 'Shuumatsu Nani Shitemasu ka? Isogashii desu ka? Sukutte Moratte Ii desu ka?', 'Five hundred years have passed since the humans went extinct at the hands of the fearsome and mysterious \'Beasts.\' The surviving races now make their homes up on floating islands in the sky, out of reach of all but the most mobile of Beasts. However, this new safe haven Regul Aire has a dark secret behind it.\r\n\r\nOnly a small group of young girls, the Leprechauns, can wield the ancient weapons needed to fend off invasions from these creatures. Into the girls\' unstable and fleeting lives, where a call to certain death could come at any moment, enters an unlikely character: a young man who lost everything in his final battle five hundred years ago, the last living human awakened from a long, icy slumber.\r\n\r\nUnable to fight any longer, Willem becomes the father that the girls never had, caring for and nurturing them even as he struggles to come to terms with his new life, in which he feels the pain of helplessly waiting for his loved ones to return home from battle that his \'Daughter\' once felt for him so long ago. Together, through their everyday interactions in the \'orphanage,\' Willem and the girls gradually come to understand what family means and what is truly worth protecting.', 0, 'Drama, Fantasy, Romance, Sci-Fi', '8.8', '2014-11-01 09:20:19', 'b7af971fa208d38968b20aae2525eb24.jpg'),
+(13, 'One Punch-Man', 'After rigorously training for three years, the ordinary Saitama has gained immense strength which allows him to take out anyone and anything with just one punch. He decides to put his new skill to good use by becoming a hero. However, he quickly becomes bored with easily defeating monsters, and wants someone to give him a challenge to bring back the spark of being a hero.\r\n\r\nUpon bearing witness to Saitama\'s amazing power, Genos, a cyborg, is determined to become Saitama\'s apprentice. During this time, Saitama realizes he is neither getting the recognition that he deserves nor known by the people due to him not being a part of the Hero Association. Wanting to boost his reputation, Saitama decides to have Genos register with him, in exchange for taking him in as a pupil. Together, the two begin working their way up toward becoming true heroes, hoping to find strong enemies and earn respect in the process.', 0, 'Action, Comedy, Parody, Sci-Fi, Super Power, Supernatural', '8.8', '2012-06-14 09:22:48', '36c9771996a5c1db0d54638ffb9284e8.jpg'),
+(14, 'Re:Zero kara Hajimeru Isekai Seikatsu', 'Suddenly, high school student Subaru Natsuki has been summoned to another world on the way back from the convenience store. With the biggest crisis of his life being summoned to another world, and with no sign of the one who summoned him, things become even worse when he is attacked. But when he is saved by a mysterious, silver-haired girl with a fairy cat, Subaru attempts to return the favor by helping her track down something that was stolen from her. When they finally manage to get a clue, Subaru and the girl are attacked and killed by someone. Subaru then awakens in the place he was summoned and notices he gained the ability \"Returns by Death\" and has become a helpless boy that only has the ability to rewind time to a certain point by dying. Beyond the despair, can he save the girl from the fate of death?', 0, 'Action, Drama, Fantasy', '8.8', '2014-01-23 09:25:06', 'a99b033b3ef111ee31d64963237d335b.jpg'),
+(15, 'manga 1', 'asdfadfasdf', 0, 'asdfadf', '8.0', '2019-10-28 05:00:12', 'aa38300b4bc4f7e5ef24ef37d1e1f983.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `list_anime`
+-- Indeks untuk tabel `list_anime`
 --
 ALTER TABLE `list_anime`
   ADD PRIMARY KEY (`id_anime`);
 
 --
--- Indexes for table `list_chapter_manga`
+-- Indeks untuk tabel `list_chapter_manga`
 --
 ALTER TABLE `list_chapter_manga`
   ADD PRIMARY KEY (`no_id`);
 
 --
--- Indexes for table `list_episode_anime`
+-- Indeks untuk tabel `list_episode_anime`
 --
 ALTER TABLE `list_episode_anime`
   ADD PRIMARY KEY (`no_id`),
   ADD KEY `id_anime` (`id_anime`);
 
 --
--- Indexes for table `list_film`
+-- Indeks untuk tabel `list_film`
 --
 ALTER TABLE `list_film`
   ADD PRIMARY KEY (`id_film`);
 
 --
--- Indexes for table `list_manga`
+-- Indeks untuk tabel `list_manga`
 --
 ALTER TABLE `list_manga`
   ADD PRIMARY KEY (`id_manga`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `list_anime`
+-- AUTO_INCREMENT untuk tabel `list_anime`
 --
 ALTER TABLE `list_anime`
   MODIFY `id_anime` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `list_chapter_manga`
+-- AUTO_INCREMENT untuk tabel `list_chapter_manga`
 --
 ALTER TABLE `list_chapter_manga`
-  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `list_episode_anime`
+-- AUTO_INCREMENT untuk tabel `list_episode_anime`
 --
 ALTER TABLE `list_episode_anime`
   MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
--- AUTO_INCREMENT for table `list_film`
+-- AUTO_INCREMENT untuk tabel `list_film`
 --
 ALTER TABLE `list_film`
   MODIFY `id_film` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `list_manga`
+-- AUTO_INCREMENT untuk tabel `list_manga`
 --
 ALTER TABLE `list_manga`
-  MODIFY `id_manga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_manga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `list_episode_anime`
+-- Ketidakleluasaan untuk tabel `list_episode_anime`
 --
 ALTER TABLE `list_episode_anime`
   ADD CONSTRAINT `list_episode_anime_ibfk_1` FOREIGN KEY (`id_anime`) REFERENCES `list_anime` (`id_anime`) ON DELETE CASCADE ON UPDATE NO ACTION;

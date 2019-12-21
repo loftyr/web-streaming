@@ -5,6 +5,7 @@ class Home extends CI_Controller {
 
     public function index(){
         $dataheader['judul']    = 'Anime DB';
+        $dataheader['css_anime']      = 'aktif';
         $dataheader['css']      = 'home-style.css';
         $datafooter['js']       = 'home-script.js';
 

@@ -5,36 +5,39 @@ class Manga extends CI_Controller {
 
     public function index() {
         $dataheader['judul']    = 'Manga DB';
+        $dataheader['css_manga']      = 'aktif';
         $dataheader['css']      = 'manga-style.css';//
         $datafooter['js']       = 'manga-script.js';//
 
         $data['manga']          = $this->manga_m->get_manga();
+
         
         $this->load->view('templates/header', $dataheader);
         $this->load->view('manga/manga_v', $data);
         $this->load->view('templates/footer', $datafooter);
     }
 
-    public function view() {
+    public function view($id) {
         $dataheader['judul']    = 'Manga DB';
         $dataheader['css']      = 'mangaView-style.css';//
         $datafooter['js']       = 'mangaView-script.js';//
 
-        $data['manga']          = "";
-        // $data['manga']          = $this->manga_m->getDataById();
+        // $data['manga']          = "";
+        $data['manga']          = $this->manga_m->getDataListChap($id);
+        // var_dump($data);die;
         
         $this->load->view('templates/header', $dataheader);
         $this->load->view('manga/view_v', $data);
         $this->load->view('templates/footer', $datafooter);
     }
 
-    public function chapter() {
+    public function chapter($id) {
         $dataheader['judul']    = 'Manga DB';
-        $dataheader['css']      = '';//mangaChap-style.css
+        $dataheader['css']      = 'mangaChap-style.css';//
         $datafooter['js']       = '';//mangaChap-script.js
 
-        $data['manga']          = "";
-        // $data['manga']          = $this->manga_m->getDataById();
+        $data['manga']          = $this->manga_m->getMangabyID($id);
+        $data['chapter']        = $this->manga_m->get_chapter($id);
         
         $this->load->view('templates/header', $dataheader);
         $this->load->view('manga/chapter_v', $data);

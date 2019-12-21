@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="homenav">
                 <ul class="navbar-nav">
                     <li class="nav-item pr-2">
-                        <a class="nav-link" href="<?= base_url() ?>">Anime DB</a>
+                        <a class="nav-link"  href="<?= base_url() ?>">Anime DB</a>
                     </li>
                     <li class="nav-item pr-2">
                         <a class="nav-link" href="<?= base_url('film') ?>">Film DB</a>
@@ -54,29 +54,40 @@
                             <tbody>
                                 <tr>
                                     <th>Judul</th>
-                                    <td></td>
+                                    <td><?= $manga[0]->judul_manga; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Genre</th>
-                                    <td></td>
+                                    <td><?= $manga[0]->genre; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Sinopsis</th>
-                                    <td></td>
+                                    <td><?= $manga[0]->alur_cerita; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Tanggal Upload</th>
-                                    <td></td>
+                                    <td><?= $manga[0]->published; ?></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="paging">
-                    
+
+                <div class="list-chapter">
+                    <div class="list">
+                        <ol class="list-item">List Chapter
+                            <?php foreach($chapter as $chap): ?>
+                                <li><a class="list-object" href="<?= base_url('manga/view/'.$chap->no_id) ?>"><?= $chap->judul_chapter ?></a></li>
+                            <?php endforeach; ?>
+                            <!-- <?php for($i = 1; $i <= 50; $i++) : ?>
+                                <li><a href="">Chapter <?= $i ?></a></li>
+                            <?php endfor; ?> -->
+                        </ol>
+                    </div>
                 </div>
+
                 <div id="line-side-body">
-        
+                    
                 </div>
             </div>
             <div class="col-lg-3 side-body">
